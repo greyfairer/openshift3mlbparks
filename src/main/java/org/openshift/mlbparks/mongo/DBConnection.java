@@ -27,8 +27,9 @@ public class DBConnection {
 
 	@PostConstruct
 	public void afterCreate() {
-		String mongoHost = System.getenv("MONGODB_SERVICE_HOST");
-		String mongoPort = System.getenv("MONGODB_SERVICE_PORT");
+		
+		String mongoHost = System.getenv("DB_HOST");
+		String mongoPort = System.getenv("DB_PORT");
 		String mongoUser = System.getenv("MONGODB_USER");
 		String mongoPassword = System.getenv("MONGODB_PASSWORD");
 		String mongoDBName = System.getenv("MONGODB_DATABASE");
